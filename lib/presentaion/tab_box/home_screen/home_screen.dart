@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:face_variant/data/home_model.dart';
 import 'package:face_variant/utils/app_color.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -68,12 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               })}');
                               return GestureDetector(
                                 onTap: () {
-                                  Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            const DetailScreen(),
-                                      ));
+                                  context.go('/detail');
                                 },
                                 child: Column(
                                     crossAxisAlignment:

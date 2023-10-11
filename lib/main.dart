@@ -4,6 +4,8 @@ import 'package:face_variant/presentaion/tab_box/tab_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'presentaion/tab_box/go_routes.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -17,8 +19,8 @@ class MainApp extends StatelessWidget {
       create: (context) => PlaceCubit(),
       child: BlocProvider(
         create: (context) => CategoryCubit(),
-        child: MaterialApp(
-            home: TabBox()
+        child: MaterialApp.router(
+          routerConfig: router,
         ),
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:face_variant/global_widgets/global_button_settings.dart';
-import 'package:face_variant/presentaion/tab_box/settings_screen/sub_screen/language_screen.dart';
-import 'package:face_variant/presentaion/tab_box/settings_screen/sub_screen/valyuta_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'widget/change_theme_widget.dart';
 
@@ -23,12 +22,12 @@ class SettingsScreen extends StatelessWidget {
         child: Column(
           children: [
             GlobalButton(title: 'Sum', callback: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>const ValyutaScreen(),));
+             context.go('/valyuta');
 
             }),
             const   SizedBox(height: 10),
             GlobalButton(title: 'Language', callback: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>const LanguageScreen(),));
+            context.go('/language');
             }),
             const    SizedBox(height: 10),
             ChangeThemeButton(

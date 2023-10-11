@@ -1,8 +1,5 @@
-
-
-import 'package:face_variant/presentaion/tab_box/settings_screen/settings_screen.dart';
-import 'package:face_variant/presentaion/tab_box/tab_box.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 
 class ValyutaScreen extends StatelessWidget {
@@ -14,7 +11,7 @@ class ValyutaScreen extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new_outlined,color: Colors.black,),
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) =>const TabBox(),));
+            context.go('/tab_box');
           },),
         elevation: 0,centerTitle: true,
         backgroundColor: Colors.white,

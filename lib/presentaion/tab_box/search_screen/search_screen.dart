@@ -3,11 +3,11 @@ import 'package:face_variant/business_logic/cubits/place_cubit/place_cubit.dart'
 import 'package:face_variant/data/categories.dart';
 import 'package:face_variant/data/fake_data.dart';
 import 'package:face_variant/data/home_model.dart';
-import 'package:face_variant/presentaion/tab_box/home_screen/sub_screens/detail_screen.dart';
 import 'package:face_variant/presentaion/tab_box/home_screen/widget/category_widget.dart';
 import 'package:face_variant/utils/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -102,12 +102,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     itemBuilder: (context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                  const DetailScreen(),
-                                ));
+                            context.go('/detail');
                           },
                           child: Column(
                               crossAxisAlignment:

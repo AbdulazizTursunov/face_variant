@@ -15,9 +15,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _init() async {
     await Future.delayed(const Duration(seconds: 3));
-
     if (context.mounted) {
-      context.go('tab_box');
+      context.go('/tab_box');
     }
   }
 
@@ -32,7 +31,8 @@ class _SplashScreenState extends State<SplashScreen> {
       child: SizedBox(
           height: double.infinity,
           width: double.infinity,
-          child: Image.asset(AppImage.logo)),
+          child: ClipRRect(
+              child: Image.asset(AppImage.logo))),
     ),);
   }
 }
