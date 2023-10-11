@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../../utils/app_color.dart';
-import '../../../utils/constant.dart';
 
 class GlobalButton extends StatefulWidget {
   const GlobalButton({Key? key, required this.title, required this.callback})
@@ -27,7 +25,7 @@ class _GlobalButtonState extends State<GlobalButton> {
       child: ListTile(
         title: Text(widget.title,style: Theme.of(context).textTheme.titleLarge!.copyWith(color: AppColors.black),),
         onTap: widget.callback,
-        trailing: Icon(Icons.integration_instructions),
+        trailing:const Icon(Icons.integration_instructions),
       ),
     );
   }

@@ -11,5 +11,6 @@ class AppImage{
   static const String image_3 = 'assets/image/next3.png';
   static const String image_4 = 'assets/image/next4.png';
   static const String language = 'assets/image/language.png';
+  static const String logo = 'assets/image/logo.png';
 
 }

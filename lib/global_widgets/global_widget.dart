@@ -17,15 +17,16 @@ class _GlobalButtonsState extends State<GlobalButtons> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+      margin:const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
       child: Ink(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: Colors.blue,
         ),
         child: InkWell(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
+          onTap: widget.callback,
+          child:  Padding(
+            padding:  const EdgeInsets.all(20.0),
             child: Center(
                 child: Text(
                   widget.title,
@@ -35,7 +36,6 @@ class _GlobalButtonsState extends State<GlobalButtons> {
                       .copyWith(color: AppColors.white),
                 )),
           ),
-          onTap: widget.callback,
         ),
       ),
     );

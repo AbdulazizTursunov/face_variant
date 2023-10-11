@@ -3,16 +3,18 @@ import 'package:flutter/material.dart';
 
 class HomeModel {
   final String location;
+  final String tuman;
   final int price;
   final String category;
   final String description;
   final Image image;
 
-  HomeModel(
-      {required this.image,
-      required this.location,
-      required this.price,
-      required this.description,
-      required this.category});
+  HomeModel({
+    required this.image,
+    required this.location,
+    required this.tuman,
+    required this.price,
+    required this.description,
+    required this.category,
+  });
 }
-

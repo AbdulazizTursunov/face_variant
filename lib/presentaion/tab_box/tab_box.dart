@@ -2,6 +2,8 @@ import 'package:face_variant/presentaion/tab_box/home_screen/home_screen.dart';
 import 'package:face_variant/presentaion/tab_box/settings_screen/settings_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'search_screen/search_screen.dart';
+
 
 class TabBox extends StatefulWidget {
   const TabBox({Key? key}) : super(key: key);
@@ -18,6 +20,7 @@ class _TabBoxState extends State<TabBox> {
   void initState() {
     screens = [
    const   HomeScreen(),
+     const SearchScreen(),
    const   SettingsScreen(),
     ];
     super.initState();
@@ -42,6 +45,7 @@ class _TabBoxState extends State<TabBox> {
     },
           items:const [
         BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'home'),
+        BottomNavigationBarItem(icon: Icon(Icons.search),label: 'search'),
         BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'settings'),
       ]),
     );

@@ -1,4 +1,4 @@
-import 'package:face_variant/data/face_data.dart';
+import 'package:face_variant/data/fake_data.dart';
 import 'package:flutter/material.dart';
 
 
@@ -10,7 +10,7 @@ class CustomSearchDelegate extends SearchDelegate{
   List<Widget>? buildActions(BuildContext context) {
     return  [
       IconButton(
-        icon: Icon(Icons.clear),
+        icon:const Icon(Icons.clear),
         onPressed: () {
           query = '';
         },
