@@ -1,9 +1,7 @@
 import 'package:face_variant/business_logic/cubits/category_cubit/category_cubit.dart';
 import 'package:face_variant/business_logic/cubits/place_cubit/place_cubit.dart';
-import 'package:face_variant/presentaion/tab_box/tab_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'presentaion/tab_box/go_routes.dart';
 
 void main() {

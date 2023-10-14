@@ -12,24 +12,30 @@ final GoRouter router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
         path: '/',
+        name: '/',
         builder: (BuildContext context, GoRouterState state) =>
             const SplashScreen()),
     GoRoute(
+      name: 'tab_box',
         path: '/tab_box',
-        builder: (BuildContext context, GoRouterState state) => const TabBox()),
+        builder: (BuildContext context, GoRouterState state) =>
+        const TabBox()),
     GoRoute(
+      name: 'settings_screen',
         path: '/settings_screen',
         builder: (BuildContext context, GoRouterState state) =>
             const SettingsScreen()),
     GoRoute(
+      name: 'detail',
         path: '/detail',
         builder: (BuildContext context, GoRouterState state) =>
             const DetailScreen()),
     GoRoute(
+      name: 'language',
         path: '/language',
         builder: (BuildContext context, GoRouterState state) =>
             const LanguageScreen()),
-    GoRoute(
+    GoRoute(name: 'valyuta',
         path: '/valyuta',
         builder: (BuildContext context, GoRouterState state) =>
             const ValyutaScreen()),
